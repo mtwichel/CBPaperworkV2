@@ -1,3 +1,7 @@
 /* Scss Document */
 body {
   padding-top: 65px; }
+
+.form-row {
+	padding-top: 15px;
+}

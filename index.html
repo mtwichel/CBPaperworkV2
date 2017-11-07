@@ -46,14 +46,58 @@
       </div>
       <div id="collapse1" class="panel-collapse collapse in">
         <div class="panel-body">
-        	<form role="form" data-toggle="validator">
+        	<form role="form">
 				<div class="form-row">
 					<label for="gs">Gross Sales</label>
 					<div class="input-group">
 						<span class = "input-group-addon">$</span>
-						<input type="number"  min="0" step=".01" data-number-to-fixed="2" data-number-stepfactor="100" class="form-control currency" id="gs"/>
+						<input type="number"  min="0" step=".01"  class="form-control currency" id="gs"/>
 					</div>
 				</div>
+               
+               <div class="form-row">
+					<label for="gs">Gift Card Sales</label>
+					<div class="input-group">
+						<span class = "input-group-addon">$</span>
+						<input type="number"  min="0" step=".01"  class="form-control currency" id="gcs"/>
+					</div>
+				</div>
+                
+                <div class="form-row">
+					<label for="gs">Gift Card Redeem</label>
+					<div class="input-group">
+						<span class = "input-group-addon">$</span>
+						<input type="number"  min="0" step=".01"  class="form-control currency" id="gcr"/>
+					</div>
+				</div>
+               
+               
+               
+               
+               <div class="form-row">
+					<label for="gs">Net Gross</label>
+					<h4 id="net-gross">$0.00</h4>
+				</div>
+               
+               
+               <div class="form-row">
+					<label for="gs">Gross Sales</label>
+					<div class="input-group">
+						<span class = "input-group-addon">$</span>
+						<input type="number"  min="0" step=".01"  class="form-control currency" id="gs"/>
+					</div>
+				</div>
+               
+               
+               <div class="form-row">
+					<label for="gs">Gross Sales</label>
+					<div class="input-group">
+						<span class = "input-group-addon">$</span>
+						<input type="number"  min="0" step=".01"  class="form-control currency" id="gs"/>
+					</div>
+				</div>
+                
+                
                  <div class="form-row">
                  	<p id="total"></p>
                  </div>
@@ -105,5 +149,7 @@
 <!-- Include all compiled plugins (below), or include individual files as needed --> 
 <script src="js/bootstrap.js"></script>
 <script src="js/alternative.js"></script>
+<!--<script src="js/validator.js"></script>-->
+
 </body>
 </html>
