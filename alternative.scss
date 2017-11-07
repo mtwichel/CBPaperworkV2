@@ -3,3 +3,49 @@
 body {
 	padding-top: 65px;
 }
+
+.form-row {
+	padding-top: 15px;
+}
+
+.navbar{
+	background-color: #1A9C19;
+	
+	.nav{
+		li {
+			a, a:visited, a:active{
+				color: #FFF;
+				background-color: #1A9C19;
+			}
+			
+			a:hover{
+				background-color: #3CB43B;
+			}
+			
+			
+			.active{
+				a, a:visited, a:active{
+					color: #FFF;
+					background-color: #1A9C19;
+				}
+				a:hover{
+					background-color: #3CB43B;
+				}
+			}
+			
+			
+			}
+		}
+//		li:hover{
+//			background-color: #3CB43B;
+//		}
+	
+	
+	.navbar-brand{
+		color: #FFF;
+	}
+}
+
+.deposit-header{
+	text-align: center;
+}

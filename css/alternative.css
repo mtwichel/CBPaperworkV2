@@ -3,5 +3,22 @@ body {
   padding-top: 65px; }
 
 .form-row {
-	padding-top: 15px;
-}
+  padding-top: 15px; }
+
+.navbar {
+  background-color: #1A9C19; }
+  .navbar .nav li a, .navbar .nav li a:visited, .navbar .nav li a:active {
+    color: #FFF;
+    background-color: #1A9C19; }
+  .navbar .nav li a:hover {
+    background-color: #3CB43B; }
+  .navbar .nav li .active a, .navbar .nav li .active a:visited, .navbar .nav li .active a:active {
+    color: #FFF;
+    background-color: #1A9C19; }
+  .navbar .nav li .active a:hover {
+    background-color: #3CB43B; }
+  .navbar .navbar-brand {
+    color: #FFF; }
+
+.deposit-header {
+  text-align: center; }
