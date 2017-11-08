@@ -9,7 +9,6 @@
 <!-- Bootstrap -->
 <link href="css/bootstrap.css" rel="stylesheet">
 <link href="css/alternative.css" rel="stylesheet" type="text/css">
-<link href="css/toggle.css" rel="stylesheet" type="text/css">
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -26,9 +25,9 @@
       <a class="navbar-brand" href="#">City Brew</a> </div>
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li><a href="#">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#">Paperwork</a></li>
+        <li><a href="#about">Discussion</a></li>
+        <li><a href="#contact">CBU</a></li>
       </ul>
     </div>
     <!--/.nav-collapse --> 
@@ -36,218 +35,263 @@
 </div>
 <div class="container">
  <div class="row">
-   <div class="col-md-6"><h1>City Brew Paperwork</h1></div>
-   <div class="col-md-6">
-   		<label class="switch">
-   			Money
-  			<input type="checkbox">
-  			<span class="slider round"></span>
-  			Number
-		</label>
-	</div>
+   <div class="col-md-6"><h1 class="switch-header">City Brew Paperwork</h1></div>
+   <div class="col-md-6"><div class="btn-group pull-right">
+       <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Input Type <span class="caret"></span></button>
+       <ul class="dropdown-menu">
+         <li role="presentation"><a href="#">Currency</a></li>
+         <li role="presentation"><a href="#">Bill Number</a></li>
+       </ul>
+     </div></div>
  </div>
-  <form role="form">
+
+     
+<form role="form">
     <div class="panel-group" id="accordion">
-      <div class="panel panel-default">
-        <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse1">
-          <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Over/Short Calculation</a> </h4>
-        </div>
-        <div id="collapse1" class="panel-collapse collapse">
-          <div class="panel-body">
-            <div class="form-row">
-              <label for="gs">Gross Sales</label>
-              <div class="input-group"> <span class = "input-group-addon">$</span>
-                <input type="number"  min="0" step=".01"  class="form-control" id="gs"/>
-              </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+              <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Over/Short Calculation</a> </h4>
             </div>
-            <div class="form-row">
-              <label for="gs">Gift Card Sales</label>
-              <div class="input-group"> <span class = "input-group-addon">$</span>
-                <input type="number"  min="0" step=".01"  class="form-control" id="gcs"/>
-              </div>
-            </div>
-            <div class="form-row">
-              <label for="gs">Gift Card Redeem</label>
-              <div class="input-group"> <span class = "input-group-addon">$</span>
-                <input type="number"  min="0" step=".01"  class="form-control" id="gcr"/>
-              </div>
-            </div>
-            <div class="form-row">
-              <label for="gs">Net Gross</label>
-              <h4 id="net-gross">$0.00</h4>
-            </div>
-            <div class="form-row">
-              <label for="gs">Voids</label>
-              <div class="input-group"> <span class = "input-group-addon">$</span>
-                <input type="number"  min="0" step=".01"  class="form-control" id="v"/>
-              </div>
-            </div>
-            <div class="form-row">
-              <label for="gs">Discounts</label>
-              <div class="input-group"> <span class = "input-group-addon">$</span>
-                <input type="number"  min="0" step=".01"  class="form-control" id="d"/>
-              </div>
-            </div>
-            <div class="form-row">
-              <label for="gs">Net Sales</label>
-              <h4 id="net-sales">$0.00</h4>
-            </div>
-            <div class="form-row">
-              <label for="gs">Visa</label>
-              <div class="input-group"> <span class = "input-group-addon">$</span>
-                <input type="number"  min="0" step=".01"  class="form-control" id="visa"/>
-              </div>
-            </div>
-            <div class="form-row">
-              <label for="gs">Master Card</label>
-              <div class="input-group"> <span class = "input-group-addon">$</span>
-                <input type="number"  min="0" step=".01"  class="form-control" id="mc"/>
-              </div>
-            </div>
-            <div class="form-row">
-              <label for="gs">Amex</label>
-              <div class="input-group"> <span class = "input-group-addon">$</span>
-                <input type="number"  min="0" step=".01"  class="form-control" id="amex"/>
-              </div>
-            </div>
-            <div class="form-row">
-              <label for="gs">Discover</label>
-              <div class="input-group"> <span class = "input-group-addon">$</span>
-                <input type="number"  min="0" step=".01"  class="form-control" id="disc"/>
-              </div>
-            </div>
-            <div class="form-row">
-              <label for="gs">Paid Out</label>
-              <div class="input-group"> <span class = "input-group-addon">$</span>
-                <input type="number"  min="0" step=".01"  class="form-control" id="pdout"/>
-              </div>
-            </div>
-            <div class="form-row">
-              <label for="gs">Over/Short</label>
-              <h4 id="over-short">$0.00</h4>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="panel panel-default">
-        <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse2">
-          <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Deposit</a> </h4>
-        </div>
-        <div id="collapse2" class="panel-collapse collapse">
-          <div class="panel-body">
-            <h3 id="total-deposit" class="deposit-header">Total Deposit: $0.00</h3>
-            <div class="row">
-              <div class="col-md-6">
-              	<div class="form-row">
-              		<div class="input-group"> <span class = "input-group-addon">$100</span>
-               		  <input type="number"  min="0" step=".01"  class="form-control" id="dHun"/>
-              		</div>
-            	</div>
-            	
-            	<div class="form-row">
-              		<div class="input-group"> <span class = "input-group-addon">$50</span>
-               		  <input type="number"  min="0" step=".01"  class="form-control" id="dHun"/>
-              		</div>
-            	</div>
-            	
-            	<div class="form-row">
-              		<div class="input-group"> <span class = "input-group-addon">$20</span>
-               		  <input type="number"  min="0" step=".01"  class="form-control" id="dHun"/>
-              		</div>
-            	</div>
-            	
-            	<div class="form-row">
-              		<div class="input-group"> <span class = "input-group-addon">$10</span>
-               		  <input type="number"  min="0" step=".01"  class="form-control" id="dHun"/>
-              		</div>
-            	</div>
-            	
-            	<div class="form-row">
-              		<div class="input-group"> <span class = "input-group-addon">$5</span>
-               		  <input type="number"  min="0" step=".01"  class="form-control" id="dHun"/>
-              		</div>
-            	</div>
-            	
-            	<div class="form-row">
-              		<div class="input-group"> <span class = "input-group-addon">$2</span>
-               		  <input type="number"  min="0" step=".01"  class="form-control" id="dHun"/>
-              		</div>
-            	</div>
-            	            	
-            	<div class="form-row">
-              		<div class="input-group"> <span class = "input-group-addon">$1</span>
-               		  <input type="number"  min="0" step=".01"  class="form-control" id="dHun"/>
-              		</div>
-				</div>
-            	
-              </div>
-              <div class="col-md-6">
-              	<div class="form-row">
-              		<div class="input-group"> <span class = "input-group-addon">1.00</span>
-               		  <input type="number"  min="0" step=".01"  class="form-control" id="dHun"/>
-              		</div>
-            	</div>
-            	
-            	<div class="form-row">
-              		<div class="input-group"> <span class = "input-group-addon">0.50</span>
-               		  <input type="number"  min="0" step=".01"  class="form-control" id="dHun"/>
-              		</div>
-            	</div>
-            	
-            	<div class="form-row">
-              		<div class="input-group"> <span class = "input-group-addon">0.25</span>
-               		  <input type="number"  min="0" step=".01"  class="form-control" id="dHun"/>
-              		</div>
-            	</div>
-            	
-            	<div class="form-row">
-              		<div class="input-group"> <span class = "input-group-addon">0.10</span>
-               		  <input type="number"  min="0" step=".01"  class="form-control" id="dHun"/>
-              		</div>
-            	</div>
-            	
-            	<div class="form-row">
-              		<div class="input-group"> <span class = "input-group-addon">0.05</span>
-               		  <input type="number"  min="0" step=".01"  class="form-control" id="dHun"/>
-              		</div>
-            	</div>
-            	
-            	<div class="form-row">
-              		<div class="input-group"> <span class = "input-group-addon">0.01</span>
-               		  <input type="number"  min="0" step=".01"  class="form-control" id="dHun"/>
-              		</div>
-            	</div>
-            	
+            <div id="collapse1" class="panel-collapse collapse">
+              <div class="panel-body">
+                <div class="form-row">
+                  <label for="gs">Gross Sales</label>
+                  <div class="input-group"> <span class = "input-group-addon">$</span>
+                    <input type="number"  min="0" step=".01"  class="form-control currency overshort" id="gs"/>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <label for="gs">Gift Card Sales</label>
+                  <div class="input-group"> <span class = "input-group-addon">$</span>
+                    <input type="number"  min="0" step=".01"  class="form-control currency overshort" id="gcs"/>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <label for="gs">Gift Card Redeem</label>
+                  <div class="input-group"> <span class = "input-group-addon">$</span>
+                    <input type="number"  min="0" step=".01"  class="form-control currency overshort" id="gcr"/>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <label for="gs">Net Gross</label>
+                  <h4 id="net-gross">$0.00</h4>
+                </div>
+                <div class="form-row">
+                  <label for="gs">Voids</label>
+                  <div class="input-group"> <span class = "input-group-addon">$</span>
+                    <input type="number"  min="0" step=".01"  class="form-control currency overshort" id="v"/>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <label for="gs">Discounts</label>
+                  <div class="input-group"> <span class = "input-group-addon">$</span>
+                    <input type="number"  min="0" step=".01"  class="form-control currency overshort" id="d"/>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <label for="gs">Net Sales</label>
+                  <h4 id="net-sales">$0.00</h4>
+                </div>
+                <div class="form-row">
+                  <label for="gs">Visa</label>
+                  <div class="input-group"> <span class = "input-group-addon">$</span>
+                    <input type="number"  min="0" step=".01"  class="form-control currency overshort" id="visa"/>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <label for="gs">Master Card</label>
+                  <div class="input-group"> <span class = "input-group-addon">$</span>
+                    <input type="number"  min="0" step=".01"  class="form-control currency overshort" id="mc"/>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <label for="gs">Amex</label>
+                  <div class="input-group"> <span class = "input-group-addon">$</span>
+                    <input type="number"  min="0" step=".01"  class="form-control currency overshort" id="amex"/>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <label for="gs">Discover</label>
+                  <div class="input-group"> <span class = "input-group-addon">$</span>
+                    <input type="number"  min="0" step=".01"  class="form-control currency overshort" id="disc"/>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <label for="gs">Paid Out</label>
+                  <div class="input-group"> <span class = "input-group-addon">$</span>
+                    <input type="number"  min="0" step=".01"  class="form-control currency overshort" id="pdout"/>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <label for="gs">Over/Short</label>
+                  <h4 id="over-short">$0.00</h4>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="panel panel-default">
-        <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse3">
-          <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Bank Bag</a> </h4>
-        </div>
-        <div id="collapse3" class="panel-collapse collapse">
-          <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-            minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-            commodo consequat.</div>
-        </div>
-      </div>
-      <div class="panel panel-default">
-        <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse4">
-          <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Tills</a> </h4>
-        </div>
-        <div id="collapse4" class="panel-collapse collapse">
-          <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-            minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-            commodo consequat.</div>
-        </div>
-      </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+              <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Deposit</a> </h4>
+            </div>
+            <div id="collapse2" class="panel-collapse collapse">
+              <div class="panel-body">
+                <h3 id="total-deposit" class="deposit-header">Total Deposit: $0.00</h3>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-row">
+                      <div class="input-group"> <span class = "input-group-addon">$100</span>
+                        <input type="number"  min="0" step=".01"  class="form-control number deposit" id="dHun"/>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="input-group"> <span class = "input-group-addon">$50</span>
+                        <input type="number"  min="0" step=".01"  class="form-control number deposit" id="dFif"/>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="input-group"> <span class = "input-group-addon">$20</span>
+                        <input type="number"  min="0" step=".01"  class="form-control number deposit" id="dTwe"/>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="input-group"> <span class = "input-group-addon">$10</span>
+                        <input type="number"  min="0" step=".01"  class="form-control number deposit" id="dTen"/>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="input-group"> <span class = "input-group-addon">$5</span>
+                        <input type="number"  min="0" step=".01"  class="form-control number deposit" id="dFiv"/>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="input-group"> <span class = "input-group-addon">$2</span>
+                        <input type="number"  min="0" step=".01"  class="form-control number deposit" id="dTwo"/>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="input-group"> <span class = "input-group-addon">$1</span>
+                        <input type="number"  min="0" step=".01"  class="form-control number deposit" id="dOne"/>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-row">
+                      <div class="input-group"> <span class = "input-group-addon">1.00</span>
+                        <input type="number"  min="0" step=".01"  class="form-control number deposit" id="dDoc"/>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="input-group"> <span class = "input-group-addon">0.50</span>
+                        <input type="number"  min="0" step=".01"  class="form-control number deposit" id="dFic"/>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="input-group"> <span class = "input-group-addon">0.25</span>
+                        <input type="number"  min="0" step=".01"  class="form-control number deposit" id="dQua"/>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="input-group"> <span class = "input-group-addon">0.10</span>
+                        <input type="number"  min="0" step=".01"  class="form-control number deposit" id="dDim"/>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="input-group"> <span class = "input-group-addon">0.05</span>
+                        <input type="number"  min="0" step=".01"  class="form-control number deposit" id="dNic"/>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="input-group"> <span class = "input-group-addon">0.01</span>
+                        <input type="number"  min="0" step=".01"  class="form-control number deposit" id="dPen"/>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+              <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Bank Bag</a> </h4>
+            </div>
+            <div id="collapse3" class="panel-collapse collapse">
+              <div class="panel-body">
+              	<h3 id="total-bankbag" class="deposit-header">Total Bank Bag: $0.00</h3>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-row">
+                      <div class="input-group"> <span class = "input-group-addon">$100</span>
+                        <input type="number"  min="0" step=".01"  class="form-control number bankbag" id="bbHun"/>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="input-group"> <span class = "input-group-addon">$50</span>
+                        <input type="number"  min="0" step=".01"  class="form-control number bankbag" id="bbFif"/>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="input-group"> <span class = "input-group-addon">$20</span>
+                        <input type="number"  min="0" step=".01"  class="form-control number bankbag" id="bbTwe"/>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="input-group"> <span class = "input-group-addon">$10</span>
+                        <input type="number"  min="0" step=".01"  class="form-control number bankbag" id="bbTen"/>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="input-group"> <span class = "input-group-addon">$5</span>
+                        <input type="number"  min="0" step=".01"  class="form-control number bankbag" id="bbFiv"/>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="input-group"> <span class = "input-group-addon">$1</span>
+                        <input type="number"  min="0" step=".01"  class="form-control number bankbag" id="bbOne"/>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-row">
+                      <div class="input-group"> <span class = "input-group-addon">Quarter Rolls</span>
+                        <input type="number"  min="0" step=".01"  class="form-control number bankbag" id="bbQua"/>
+                        <span class="input-group-addon" id="need-quarter-message">+0.50</span>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="input-group"> <span class = "input-group-addon">Dime Rolls</span>
+                        <input type="number"  min="0" step=".01"  class="form-control number bankbag" id="bbDim"/>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="input-group"> <span class = "input-group-addon">Nickel Rolls</span>
+                        <input type="number"  min="0" step=".01"  class="form-control number bankbag" id="bbNic"/>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="input-group"> <span class = "input-group-addon">Penny Rolls</span>
+                        <input type="number"  min="0" step=".01"  class="form-control number bankbag" id="bbPen"/>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+              <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Tills</a> </h4>
+            </div>
+            <div id="collapse4" class="panel-collapse collapse">
+              <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                commodo consequat.</div>
+            </div>
+          </div>
     </div>
   </form>
 </div>
+
 <!-- /.container --> 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
 <script src="js/jquery-1.11.3.min.js"></script> 
@@ -255,6 +299,7 @@
 <!-- Include all compiled plugins (below), or include individual files as needed --> 
 <script src="js/bootstrap.js"></script> 
 <script src="js/alternative.js"></script> 
+<script src="js/data-processing.js"></script>
 <!--<script src="js/validator.js"></script>-->
 
 </body>

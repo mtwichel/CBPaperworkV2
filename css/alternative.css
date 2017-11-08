@@ -22,3 +22,9 @@ body {
 
 .deposit-header {
   text-align: center; }
+
+.switch-header {
+  display: inline-block; }
+
+#need-quarter-message {
+  display: none; }
