@@ -1,0 +1,463 @@
+<html>
+        <head>
+          <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+          <script type="text/javascript">
+          $("#btnPrint").live("click", function () {
+              var divContents = $("#body").html();
+              var printWindow = window.open('', '', 'height=400,width=800');
+              printWindow.document.write('<html><head><title>DIV Contents</title>');
+              printWindow.document.write('</head><body >');
+              printWindow.document.write(divContents);
+              printWindow.document.write('</body></html>');
+              printWindow.document.close();
+              printWindow.print();
+          });
+      </script></head>
+        <body id = "body">
+          <button id="btnPrint">Print</button>
+        <br><br><br>
+        <table align =\center\ cell-padding = \5\>
+          <tr>
+            <td>Closers:</td>
+            <td style =\border-bottom:1px solid black;\>  data.getCloser(0)  </td>
+            <td> & </td>
+            <td style =\border-bottom:1px solid black;\>  data.getCloser(1)  </td>
+        </table>
+        <br><br>
+        <center>
+
+          <table>
+
+            <tr>
+              <td>Date: data.getDateString()</td>
+              <td></td>
+            </tr>
+
+        <tr><td><br></td></tr>
+            <tr>
+              <td>Gross Sales:</td>
+              <td style =\border-bottom:1px solid black;\>  format.format(data.getOSValue(OverShort.GROSS))  </td>
+            </tr>
+
+            <tr>
+              <td>Gift Card Redeems:</td>
+              <td style =\border-bottom:1px solid black;\>  format.format(data.getOSValue(OverShort.CARD_REDEEMS))  </td>
+            </tr>
+
+            <tr>
+              <td>Gift Card Sales:</td>
+              <td style =\border-bottom:1px solid black;\>  format.format(data.getOSValue(OverShort.CARD_SALES))  </td>
+            </tr>
+
+            <tr>
+              <td>Adjusted Gross Sales:</td>
+              <td style =\border-bottom:1px solid black;\>  format.format(data.getOSValue(OverShort.ADJUSTED_GROSS))  </td>
+            </tr>
+
+            <tr>
+              <td>Voids:</td>
+              <td style =\border-bottom:1px solid black;\>  format.format(data.getOSValue(OverShort.VOIDS))  </td>
+            </tr>
+
+            <tr>
+              <td>Discounts:</td>
+              <td style =\border-bottom:1px solid black;\>  format.format(data.getOSValue(OverShort.DISCOUNTS))  </td>
+            </tr>
+
+            <tr>
+              <td>Adjusted Net Sales:</td>
+              <td style =\border-bottom:1px solid black;\>  format.format(data.getOSValue(OverShort.ADJUSTED_NET))  </td>
+            </tr>
+
+            <tr>
+              <td>Paid Out:</td>
+              <td style =\border-bottom:1px solid black;\>  format.format(data.getOSValue(OverShort.PAID_OUT))  </td>
+            </tr>
+
+            <tr>
+              <td>Credit Card:</td>
+              <td style =\border-bottom:1px solid black;\>  format.format(data.getOSValue(OverShort.CARD_TOTAL))  </td>
+            </tr>
+
+            <tr>
+              <td>Deposit:</td>
+              <td style =\border-bottom:1px solid black;\>  format.format(data.getDepositTotal())  </td>
+            </tr>
+
+            <tr>
+              <td>  ifOverShortString </td>
+              <td style =\border-bottom:1px solid black;\>  format.format(Math.abs(data.getOSValue(OverShort.OVER_SHORT)))  </td>
+            </tr>
+
+          </table>
+        <br><br>
+        <hr>
+        <p align = \center\>Total Checks:   format.format(data.getCheckTotal())  </p>
+        <div align = \center\>
+          <table cellpadding = \5\ style=\ display: inline-block; margin:0 30px 30px 0; vertical-align:top\>
+        <tr>
+              <td colspan=\3\>Bills</td>
+              <td>format.format(data.getBillTotal())</td>
+            </tr>
+            <tr>
+              <td>$100</td>
+              <td style =\border-bottom:1px solid black;\>  data.getDepositData(Deposit.HUNDRED)  </td>
+              <td>=</td>
+              <td style =\border-bottom:1px solid black;\>  format.format(data.getDepositData(Deposit.HUNDRED) * 100)  </td>
+            </tr>
+            <tr>
+              <td>$50</td>
+              <td style =\border-bottom:1px solid black;\>  data.getDepositData(Deposit.FIFTY)  </td>
+              <td>=</td>
+              <td style =\border-bottom:1px solid black;\>  format.format(data.getDepositData(Deposit.FIFTY) * 50)  </td>
+            </tr>
+            <tr>
+              <td>$20</td>
+              <td style =\border-bottom:1px solid black;\>  data.getDepositData(Deposit.TWENTY)  </td>
+              <td>=</td>
+              <td style =\border-bottom:1px solid black;\>  format.format(data.getDepositData(Deposit.TWENTY) * 20)  </td>
+            </tr>
+            <tr>
+              <td>$10</td>
+              <td style =\border-bottom:1px solid black;\>  data.getDepositData(Deposit.TEN)  </td>
+              <td>=</td>
+              <td style =\border-bottom:1px solid black;\>  format.format(data.getDepositData(Deposit.TEN) * 10)  </td>
+            </tr>
+            <tr>
+              <td>$5</td>
+              <td style =\border-bottom:1px solid black;\>  data.getDepositData(Deposit.FIVE)  </td>
+              <td>=</td>
+              <td style =\border-bottom:1px solid black;\>  format.format(data.getDepositData(Deposit.FIVE) * 5)  </td>
+            </tr>
+            <tr>
+              <td>$2</td>
+              <td style =\border-bottom:1px solid black;\>  data.getDepositData(Deposit.TWO)  </td>
+              <td>=</td>
+              <td style =\border-bottom:1px solid black;\>  format.format(data.getDepositData(Deposit.TWO) * 2)  </td>
+            </tr>
+            <tr>
+              <td>$1</td>
+              <td style =\border-bottom:1px solid black;\>  data.getDepositData(Deposit.ONE)  </td>
+              <td>=</td>
+              <td style =\border-bottom:1px solid black;\>  format.format(data.getDepositData(Deposit.ONE) * 1)  </td>
+            </tr>
+          </table>
+
+          <table cellpadding = \5\ style=\ display: inline-block; margin:0 30px 30px 0; vertical-align:top\>
+        <tr>
+              <td colspan=\3\>Coins</td>
+              <td> format.format(data.getCoinTotal())</td>
+            </tr>
+            <tr>
+              <td>1.00</td>
+              <td style =\border-bottom:1px solid black;\>  data.getDepositData(Deposit.DOLLAR_COIN)  </td>
+              <td>=</td>
+              <td style =\border-bottom:1px solid black;\>  format.format(data.getDepositData(Deposit.DOLLAR_COIN) * 1.00)  </td>
+            </tr>
+            <tr>
+              <td>0.50</td>
+              <td style =\border-bottom:1px solid black;\>  data.getDepositData(Deposit.FIFTY_CENT)  </td>
+              <td>=</td>
+              <td style =\border-bottom:1px solid black;\>  format.format(data.getDepositData(Deposit.FIFTY_CENT) * .50)  </td>
+            </tr>
+            <tr>
+              <td>0.25</td>
+              <td style =\border-bottom:1px solid black;\>  data.getDepositData(Deposit.QUARTER)  </td>
+              <td>=</td>
+              <td style =\border-bottom:1px solid black;\>  format.format(data.getDepositData(Deposit.QUARTER) * .25)  </td>
+            </tr>
+            <tr>
+              <td>0.10</td>
+              <td style =\border-bottom:1px solid black;\>  data.getDepositData(Deposit.DIME)  </td>
+              <td>=</td>
+              <td style =\border-bottom:1px solid black;\>  format.format(data.getDepositData(Deposit.DIME) * .10)  </td>
+            </tr>
+            <tr>
+              <td>0.05</td>
+              <td style =\border-bottom:1px solid black;\>  data.getDepositData(Deposit.NICKEL)  </td>
+              <td>=</td>
+              <td style =\border-bottom:1px solid black;\>  format.format(data.getDepositData(Deposit.NICKEL) * .05)  </td>
+            </tr>
+            <tr>
+              <td>0.01</td>
+              <td style =\border-bottom:1px solid black;\>  data.getDepositData(Deposit.PENNY)  </td>
+              <td>=</td>
+              <td style =\border-bottom:1px solid black;\>  format.format(data.getDepositData(Deposit.PENNY) * .01)  </td>
+            </tr>
+          </table>
+
+          <p align = \center\>Deposit Total: format.format(data.getDepositTotal())</p>
+            <table  align =\center\>
+              <tr>
+                <td>Prepared By:</td>
+                <td style =\border-bottom:1px solid black;width:80%\></td>
+              </tr>
+        <tr><td colspan =\2\> </td></tr>
+              <tr>
+                <td>Checked By:</td>
+                <td style =\border-bottom:1px solid black;\></td>
+              </tr>
+            </table>
+
+
+
+
+
+
+        <div align = \center\>
+        <table cellpadding = \7\ style=\ display: inline-block; margin:0 30px 30px 0;\>
+          <tr>
+            <td colspan=\3\>Till Name:</td>
+            <td>  data.getTillName(0)  </td>
+          </tr>
+          <tr>
+            <td>$20</td>
+            <td style =\border-bottom:1px solid black;\>data.getTillData(Till.TWENTY, 0)</td>
+            <td>=</td>
+            <td style =\border-bottom:1px solid black;\>format.format(data.getTillData(Till.TWENTY, 0)*20)</td>
+          </tr>
+          <tr>
+            <td>$10</td>
+            <td style =\border-bottom:1px solid black;\>data.getTillData(Till.TEN, 0)</td>
+            <td>=</td>
+            <td style =\border-bottom:1px solid black;\>format.format(data.getTillData(Till.TEN, 0)*10)</td>
+          </tr>
+          <tr>
+            <td>$5</td>
+            <td style =\border-bottom:1px solid black;\>data.getTillData(Till.FIVE, 0)</td>
+            <td>=</td>
+            <td style =\border-bottom:1px solid black;\>format.format(data.getTillData(Till.FIVE, 0)*5)</td>
+          </tr>
+          <tr>
+            <td>$1</td>
+            <td style =\border-bottom:1px solid black;\>data.getTillData(Till.ONE, 0)</td>
+            <td>=</td>
+            <td style =\border-bottom:1px solid black;\>format.format(data.getTillData(Till.ONE, 0)*1)</td>
+          </tr>
+          <tr>
+            <td>0.25</td>
+            <td style =\border-bottom:1px solid black;\>data.getTillData(Till.QUARTER, 0)</td>
+            <td>=</td>
+            <td style =\border-bottom:1px solid black;\>format.format(data.getTillData(Till.QUARTER, 0)*0.25)</td>
+          </tr>
+          <tr>
+            <td>0.10</td>
+            <td style =\border-bottom:1px solid black;\>data.getTillData(Till.DIME, 0)</td>
+            <td>=</td>
+            <td style =\border-bottom:1px solid black;\>format.format(data.getTillData(Till.DIME, 0)*0.10)</td>
+          </tr>
+          <tr>
+            <td>0.05</td>
+            <td style =\border-bottom:1px solid black;\>data.getTillData(Till.NICKEL, 0)</td>
+            <td>=</td>
+            <td style =\border-bottom:1px solid black;\>format.format(data.getTillData(Till.NICKEL, 0)*0.05)</td>
+          </tr>
+          <tr>
+            <td>0.01</td>
+            <td style =\border-bottom:1px solid black;\>data.getTillData(Till.PENNY, 0)</td>
+            <td>=</td>
+            <td style =\border-bottom:1px solid black;\>format.format(data.getTillData(Till.PENNY, 0)*0.01)</td>
+          </tr>
+        <tr>
+            <td colspan=\3\ align = \right\>Till Total:</td>
+            <td>format.format(data.getTillTotal(0))</td>
+          </tr>
+        </table>
+
+
+        <table cellpadding = \7\ style=\ display: inline-block; margin:0 30px 30px 0;\>
+          <tr>
+            <td colspan=\3\>Till Name:</td>
+            <td>  data.getTillName(1)  </td>
+          </tr>
+          <tr>
+            <td>$20</td>
+            <td style =\border-bottom:1px solid black;\>data.getTillData(Till.TWENTY, 1)</td>
+            <td>=</td>
+            <td style =\border-bottom:1px solid black;\>format.format(data.getTillData(Till.TWENTY, 1)*20)</td>
+          </tr>
+          <tr>
+            <td>$10</td>
+            <td style =\border-bottom:1px solid black;\>data.getTillData(Till.TEN, 1)</td>
+            <td>=</td>
+            <td style =\border-bottom:1px solid black;\>format.format(data.getTillData(Till.TEN, 1)*10)</td>
+          </tr>
+          <tr>
+            <td>$5</td>
+            <td style =\border-bottom:1px solid black;\>data.getTillData(Till.FIVE, 1)</td>
+            <td>=</td>
+            <td style =\border-bottom:1px solid black;\>format.format(data.getTillData(Till.FIVE, 1)*5)</td>
+          </tr>
+          <tr>
+            <td>$1</td>
+            <td style =\border-bottom:1px solid black;\>  data.getTillData(Till.ONE, 1)  </td>
+            <td>=</td>
+            <td style =\border-bottom:1px solid black;\>format.format(data.getTillData(Till.ONE, 1)*1)</td>
+          </tr>
+          <tr>
+            <td>0.25</td>
+            <td style =\border-bottom:1px solid black;\>data.getTillData(Till.QUARTER, 1)</td>
+            <td>=</td>
+            <td style =\border-bottom:1px solid black;\>format.format(data.getTillData(Till.QUARTER, 1)*0.25)</td>
+          </tr>
+          <tr>
+            <td>0.10</td>
+            <td style =\border-bottom:1px solid black;\>data.getTillData(Till.DIME, 1)</td>
+            <td>=</td>
+            <td style =\border-bottom:1px solid black;\>format.format(data.getTillData(Till.DIME, 1)*0.10)</td>
+          </tr>
+          <tr>
+            <td>0.05</td>
+            <td style =\border-bottom:1px solid black;\>data.getTillData(Till.NICKEL, 1)</td>
+            <td>=</td>
+            <td style =\border-bottom:1px solid black;\>format.format(data.getTillData(Till.NICKEL, 1)*0.05)</td>
+          </tr>
+          <tr>
+            <td>0.01</td>
+            <td style =\border-bottom:1px solid black;\>data.getTillData(Till.PENNY, 1)</td>
+            <td>=</td>
+            <td style =\border-bottom:1px solid black;\>format.format(data.getTillData(Till.PENNY, 1)*0.01)</td>
+          </tr>
+        <tr>
+            <td colspan=\3\ align = \right\>Till Total:</td>
+            <td>format.format(data.getTillTotal(1))</td>
+          </tr>
+        </table>
+
+        <table cellpadding = \7\ style=\ display: inline-block; margin:0 30px 30px 0;\>
+          <tr>
+            <td colspan=\3\>Till Name:</td>
+            <td>  data.getTillName(2)  </td>
+          </tr>
+          <tr>
+            <td>$20</td>
+            <td style =\border-bottom:1px solid black;\>data.getTillData(Till.TWENTY, 2)</td>
+            <td>=</td>
+            <td style =\border-bottom:1px solid black;\>format.format(data.getTillData(Till.TWENTY, 2)*20)</td>
+          </tr>
+          <tr>
+            <td>$10</td>
+            <td style =\border-bottom:1px solid black;\>data.getTillData(Till.TEN, 2)</td>
+            <td>=</td>
+            <td style =\border-bottom:1px solid black;\>format.format(data.getTillData(Till.TEN, 2)*10)</td>
+          </tr>
+          <tr>
+            <td>$5</td>
+            <td style =\border-bottom:1px solid black;\>data.getTillData(Till.FIVE, 2)</td>
+            <td>=</td>
+            <td style =\border-bottom:1px solid black;\>format.format(data.getTillData(Till.FIVE, 2)*5)</td>
+          </tr>
+          <tr>
+            <td>$1</td>
+            <td style =\border-bottom:1px solid black;\>data.getTillData(Till.ONE, 2)</td>
+            <td>=</td>
+            <td style =\border-bottom:1px solid black;\>format.format(data.getTillData(Till.ONE, 2)*1)</td>
+          </tr>
+          <tr>
+            <td>0.25</td>
+            <td style =\border-bottom:1px solid black;\>data.getTillData(Till.QUARTER, 2)</td>
+            <td>=</td>
+            <td style =\border-bottom:1px solid black;\>format.format(data.getTillData(Till.QUARTER, 2)*0.25)</td>
+          </tr>
+          <tr>
+            <td>0.10</td>
+            <td style =\border-bottom:1px solid black;\>data.getTillData(Till.DIME, 2)</td>
+            <td>=</td>
+            <td style =\border-bottom:1px solid black;\>format.format(data.getTillData(Till.DIME, 2)*0.10)</td>
+          </tr>
+          <tr>
+            <td>0.05</td>
+            <td style =\border-bottom:1px solid black;\>data.getTillData(Till.NICKEL, 2)</td>
+            <td>=</td>
+            <td style =\border-bottom:1px solid black;\>format.format(data.getTillData(Till.NICKEL, 2)*0.05)</td>
+          </tr>
+          <tr>
+            <td>0.01</td>
+            <td style =\border-bottom:1px solid black;\>data.getTillData(Till.PENNY, 2)</td>
+            <td>=</td>
+            <td style =\border-bottom:1px solid black;\>format.format(data.getTillData(Till.PENNY, 2)*0.01)</td>
+          </tr>
+        <tr>
+            <td colspan=\3\ align = \right\>Till Total:</td>
+            <td>format.format(data.getTillTotal(2))</td>
+          </tr>
+        </table>
+
+        <table cellpadding = \7\ style=\ display: inline-block; margin:0 30px 30px 0;\>
+          <tr>
+            <td colspan=\4\>Change Bag:</td>
+          </tr>
+          <tr>
+            <td>$20</td>
+            <td style =\border-bottom:1px solid black;\>data.getChangeBagData(ChangeBag.TWENTY)</td>
+            <td>=</td>
+            <td style =\border-bottom:1px solid black;\>format.format(data.getChangeBagData(ChangeBag.TWENTY)*20)</td>
+          </tr>
+          <tr>
+            <td>$10</td>
+            <td style =\border-bottom:1px solid black;\>data.getChangeBagData(ChangeBag.TEN)</td>
+            <td>=</td>
+            <td style =\border-bottom:1px solid black;\>format.format(data.getChangeBagData(ChangeBag.TEN)*10)</td>
+          </tr>
+          <tr>
+            <td>$5</td>
+            <td style =\border-bottom:1px solid black;\>data.getChangeBagData(ChangeBag.FIVE)</td>
+            <td>=</td>
+            <td style =\border-bottom:1px solid black;\>format.format(data.getChangeBagData(ChangeBag.FIVE)*5)</td>
+          </tr>
+          <tr>
+            <td>$1</td>
+            <td style =\border-bottom:1px solid black;\>data.getChangeBagData(ChangeBag.ONE)</td>
+            <td>=</td>
+            <td style =\border-bottom:1px solid black;\>format.format(data.getChangeBagData(ChangeBag.ONE))</td>
+          </tr>
+          <tr>
+            <td>QR</td>
+            <td style =\border-bottom:1px solid black;\>data.getChangeBagData(ChangeBag.QUARTER)</td>
+            <td>=</td>
+            <td style =\border-bottom:1px solid black;\>format.format(data.getChangeBagData(ChangeBag.QUARTER)*10)</td>
+        needQuarters
+          </tr>
+          <tr>
+            <td>DR</td>
+            <td style =\border-bottom:1px solid black;\>data.getChangeBagData(ChangeBag.DIME)</td>
+            <td>=</td>
+            <td style =\border-bottom:1px solid black;\>format.format(data.getChangeBagData(ChangeBag.DIME)*5)</td>
+          </tr>
+          <tr>
+            <td>NR</td>
+            <td style =\border-bottom:1px solid black;\>data.getChangeBagData(ChangeBag.NICKEL)</td>
+            <td>=</td>
+            <td style =\border-bottom:1px solid black;\>format.format(data.getChangeBagData(ChangeBag.NICKEL)*2)</td>
+          </tr>
+          <tr>
+            <td>PR</td>
+            <td style =\border-bottom:1px solid black;\>data.getChangeBagData(ChangeBag.PENNY)</td>
+            <td>=</td>
+            <td style =\border-bottom:1px solid black;\>format.format(data.getChangeBagData(ChangeBag.PENNY)*0.50)</td>
+          </tr>
+        <tr>
+            <td colspan=\3\ align = \right\>Change Bag Total:</td>
+            <td>format.format(data.getChangeBagTotal())</td>
+          </tr>
+        </table>
+        </div>
+        <table  align =\center\>
+          <tr>
+            <td>Edits:</td>
+            <td style =\border-bottom:1px solid black;width:90%\> </td>
+          </tr>
+          <tr>
+            <td style =\border-bottom:1px solid black;width:90%\ colspan=\2\>&nbsp;</td>
+          </tr>
+          <tr>
+            <td style =\border-bottom:1px solid black;width:90%\ colspan=\2\>&nbsp;</td>
+          </tr>
+
+        </table>
+
+        </body>
+
+        </html>\n;
+}
+}

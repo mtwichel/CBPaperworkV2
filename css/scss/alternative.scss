@@ -10,19 +10,19 @@ body {
 
 .navbar{
 	background-color: #1A9C19;
-	
+
 	.nav{
 		li {
 			a, a:visited, a:active{
 				color: #FFF;
 				background-color: #1A9C19;
 			}
-			
+
 			a:hover{
 				background-color: #3CB43B;
 			}
-			
-			
+
+
 			.active{
 				a, a:visited, a:active{
 					color: #FFF;
@@ -32,20 +32,27 @@ body {
 					background-color: #3CB43B;
 				}
 			}
-			
+
 			
 			}
 		}
 //		li:hover{
 //			background-color: #3CB43B;
 //		}
-	
-	
+
+
 	.navbar-brand{
 		color: #FFF;
 	}
 }
 
-.deposit-header{
+.deposit-header, .till-header{
 	text-align: center;
+}
+
+.switch-header {
+	display: inline-block;
+}
+#need-quarter-message{
+	display: none;
 }

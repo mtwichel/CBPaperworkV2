@@ -20,7 +20,7 @@ body {
   .navbar .navbar-brand {
     color: #FFF; }
 
-.deposit-header {
+.deposit-header, .till-header {
   text-align: center; }
 
 .switch-header {
